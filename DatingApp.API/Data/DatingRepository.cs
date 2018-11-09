@@ -7,6 +7,7 @@ namespace DatingApp.API.Data
 {
     public class DatingRepository : IDatingRepository
     {
+
         private readonly DataContext _context;
         public DatingRepository(DataContext context)
         {
@@ -19,7 +20,7 @@ namespace DatingApp.API.Data
 
         public void Delete<T>(T entity) where T : class
         {
-                        _context.Remove(entity);
+            _context.Remove(entity);
         }
 
         public async Task<User> GetUser(int id)
@@ -30,8 +31,8 @@ namespace DatingApp.API.Data
 
         public async Task<IEnumerable<User>> GetUsers()
         {
-var users = await _context.Users.Include(p=> p.Photos).ToListAsync();
-return users; 
+            var users = await _context.Users.Include(p=> p.Photos).ToListAsync();
+            return users; 
         }
 
         public async Task<bool> SaveAll()
