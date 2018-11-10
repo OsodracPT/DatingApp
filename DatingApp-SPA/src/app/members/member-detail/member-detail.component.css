@@ -1,14 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../node_modules/bootswatch/dist/flatly/bootstrap.min.css';
-@import '../node_modules/font-awesome/css/font-awesome.min.css';
-@import '../node_modules/alertifyjs/build/css/alertify.min.css';
-@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+.img-thumbnail {
+    margin: 25px;
+    width: 85%;
+    height: 85%;
+}
 
+.card-body {
+    padding: 0 25px;
+}
 
-/* =========== */
-/* Snippet for styles.css to style the tabs component */
-/* =========== */
+.card-footer {
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: none;
+}
 
 .tab-panel {
     border: 1px solid #ddd;
@@ -17,7 +21,7 @@
   }
   
   .nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
-    border-bottom: 4px solid rgb(172, 248, 233);
+    border-bottom: 4px solid #fbcdcf;
   }
   
   .member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
@@ -35,7 +39,7 @@
   }
   
   .member-tabset > .nav-tabs > li.active {
-    border-bottom: 4px solid #18BC9C;
+    border-bottom: 4px solid #E95420;
     position: relative;
   }
   
