@@ -1,3 +1,5 @@
+import { MemberCardDetailsComponent } from './members/member-card-details/member-card-details.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
 import { UserService } from './_services/user.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { appRoutes } from './routes';
@@ -16,7 +18,6 @@ import { NavComponent } from './nav/nav.component';
 import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { MemberListComponent } from './member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 
@@ -28,7 +29,8 @@ import { MessagesComponent } from './messages/messages.component';
       RegisterComponent,
       MemberListComponent,
       ListsComponent,
-      MessagesComponent
+      MessagesComponent,
+      MemberCardDetailsComponent
    ],
    imports: [
       BrowserModule,
