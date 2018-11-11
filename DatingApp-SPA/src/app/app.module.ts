@@ -1,3 +1,4 @@
+import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { MemberListResolver } from './_resolvers/member-listl.resolver';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
@@ -26,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MembersEditComponent } from './members/members-edit/members-edit.component';
 
 export function tokenGetter() {
     return localStorage.getItem('token');
@@ -41,7 +43,8 @@ export function tokenGetter() {
       ListsComponent,
       MessagesComponent,
       MemberCardDetailsComponent,
-      MemberDetailComponent
+      MemberDetailComponent,
+      MembersEditComponent
    ],
    imports: [
       BrowserModule,
@@ -66,7 +69,8 @@ export function tokenGetter() {
       AuthGuard,
       UserService,
       MemberDetailResolver,
-      MemberListResolver
+      MemberListResolver,
+      MemberEditResolver
    ],
    bootstrap: [
       AppComponent
