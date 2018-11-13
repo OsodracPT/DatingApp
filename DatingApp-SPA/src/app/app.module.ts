@@ -30,6 +30,9 @@ import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MembersEditComponent } from './members/members-edit/members-edit.component';
 import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
+import { FileUploadModule } from 'ng2-file-upload';
+
+
 
 export function tokenGetter() {
     return localStorage.getItem('token');
@@ -54,6 +57,7 @@ export function tokenGetter() {
       HttpClientModule,
       FormsModule,
       NgxGalleryModule,
+      FileUploadModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
       RouterModule.forRoot(appRoutes),
