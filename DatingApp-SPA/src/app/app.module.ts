@@ -29,6 +29,7 @@ import { RegisterComponent } from './register/register.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MembersEditComponent } from './members/members-edit/members-edit.component';
+import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 
 export function tokenGetter() {
     return localStorage.getItem('token');
@@ -45,7 +46,8 @@ export function tokenGetter() {
       MessagesComponent,
       MemberCardDetailsComponent,
       MemberDetailComponent,
-      MembersEditComponent
+      MembersEditComponent,
+      PhotoEditComponent
    ],
    imports: [
       BrowserModule,

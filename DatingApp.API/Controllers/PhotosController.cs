@@ -16,6 +16,7 @@ namespace DatingApp.API.Controllers
 {
     [Authorize]
     [Route("api/users/{userId}/photos")]
+    [ApiController]
     public class PhotosController : ControllerBase
     {
         private readonly IDatingRepository _repo;
@@ -52,7 +53,7 @@ namespace DatingApp.API.Controllers
 
         [HttpPost]
         public async Task<IActionResult> AddPhotoForUser(int userId, 
-        PhotoForCreationDto photoForCreationDto)
+         [FromForm]PhotoForCreationDto photoForCreationDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
             return Unauthorized();
