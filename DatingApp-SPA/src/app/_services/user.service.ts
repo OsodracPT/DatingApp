@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { User } from '../_models/user';
+import { ThrowStmt } from '@angular/compiler';
 
 
 @Injectable({
@@ -30,5 +31,9 @@ updateUser(id: number, user: User) {
 setMainPhoto(userId: number, id: number) {
   return this.http.post
     (this.baseUrl + 'users/' + userId + '/photos/' + id + '/setMain', {});
+}
+
+deletePhoto(userId: number, id: number) {
+  return this.http.delete(this.baseUrl + 'users/' + userId + '/photos/' + id);
 }
 }
