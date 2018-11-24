@@ -108,7 +108,7 @@ namespace DatingApp.API.Data
             }
             else
             {
-                return user.Likees.Where(u => u.LikeeId == id).Select(i => i.LikeeId);
+                return user.Likees.Where(u => u.LikerId == id).Select(i => i.LikeeId);
             }
         }
 
