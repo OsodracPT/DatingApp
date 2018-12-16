@@ -33,6 +33,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MembersEditComponent } from './members/members-edit/members-edit.component';
 import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { MessagesResolver } from './_resolvers/messages.resolver';
 
 
 
@@ -86,7 +87,8 @@ export function tokenGetter() {
       MemberListResolver,
       MemberEditResolver,
       PreventUnsavedChanges,
-      ListsResolver
+      ListsResolver,
+      MessagesResolver
    ],
    bootstrap: [
       AppComponent
