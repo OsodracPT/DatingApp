@@ -29,12 +29,12 @@
         <!-- to me -->
 
         <div *ngIf="message.senderId != recipientId">
-          <span class="chat-image float-left">
+          <span class="chat-image float-right">
             <img src="{{message.senderPhotoUrl}}" alt="{{message.senderKnownAs}}" class="rounded-circle">
           </span>
           <div class="chat-body">
             <div class="header">
-              <small class="text-muted float-right">
+              <small class="text-muted">
                 <span class="fa fa-clock-o">
                   {{message.messageSent | timeAgo}}
                 </span>
@@ -45,7 +45,7 @@
                   (Read {{message.dateRead | timeAgo}})
                 </span>
               </small>
-              <strong class="primary-font">{{message.senderKnownAs}}</strong>
+              <strong class="primary-font float-right">{{message.senderKnownAs}}</strong>
             </div>
             <p>{{message.content}}</p>
           </div>
@@ -54,11 +54,16 @@
     </ul>
 
     <div class="card-footer">
-      <form action="">
+      <form #messageForm="ngForm" (ngSubmit)="messageForm.valid && sendMessage()"> 
         <div class="input-group">
-          <input type="text" placeholder="send a private message" class="form-control input-sm">
+          <input type="text"
+          [(ngModel)]="newMessage.content"
+          name="content"
+          required 
+          placeholder="send a private message" 
+          class="form-control input-sm">
           <div class="input-group-append">
-            <button class="btn btn-primary">Send</button>
+            <button class="btn btn-primary" [disabled]="!messageForm.valid">Send</button>
           </div>
         </div>
       </form>
